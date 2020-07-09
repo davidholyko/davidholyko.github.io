@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BackgroundTextOverlay from './BackgroundTextOverlay';
 import BackgroundIconOverlay from './BackgroundIconOverlay';
-import src from '../../images/background.webp';
+import src from '../../images/background_FHD.webp';
 
 class Background extends Component {
   render() {
