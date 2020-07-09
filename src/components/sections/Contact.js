@@ -5,6 +5,7 @@ import { icons } from '../../data/ContactData';
 class Contact extends Component {
   renderIcons = ({ href, src }) => (
     <a
+      aria-label={src}
       className=""
       href={href}
       target="_blank"
@@ -16,8 +17,8 @@ class Contact extends Component {
   );
 
   render() {
-    const text = `Need help on a project? Looking for a new hire? 
-    Send me a message or email!\nI'd love to hear from you!`;
+    const text = `Need help on a project? Send me a message or email!
+    I'd love to hear from you!`;
 
     return (
       <div id="contact" className="section">
@@ -25,7 +26,7 @@ class Contact extends Component {
           <h1 className="section-title mb-0">Contact Me</h1>
           <Resume />
           <div className="full-page-sub-section">
-            <h5 className="text-center break my-5">{text}</h5>
+            <p className="font-lg text-center break my-5">{text}</p>
             <div
               id="contact-me-icons"
               className="d-flex justify-content-around my-5"

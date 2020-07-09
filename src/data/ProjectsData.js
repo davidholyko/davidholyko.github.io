@@ -20,7 +20,7 @@ export const projects = [
     ],
   },
   {
-    title: 'LetterBox: A text-only social media platform for cat lovers',
+    title: 'LetterBox: Social media for cat lovers',
     focus: 'Teamwork and Collaboration',
     deployed: 'https://m-d-h-s.github.io/mdhs-blog-frontend',
     repo: 'https://github.com/m-d-h-s/mdhs-blog-frontend',

@@ -19,14 +19,14 @@ class Skills extends Component {
   render() {
     return (
       <div id="skills" className="section break">
-        <h4 className="section-title">Skills</h4>
-        <h4 className="text-center">Languages</h4>
+        <p className="section-title">Skills</p>
+        <p className="font-xlg text-center">Languages</p>
         <div className="skills-sub-section">{this.renderIcons(languages)}</div>
 
-        <h4 className="text-center">Libraries/Frameworks</h4>
+        <p className="font-xlg text-center">Libraries/Frameworks</p>
         <div className="skills-sub-section">{this.renderIcons(skills)}</div>
 
-        <h4 className="text-center">Technologies</h4>
+        <p className="font-xlg text-center">Technologies</p>
         <div className="skills-sub-section">
           {this.renderIcons(technologies)}
         </div>

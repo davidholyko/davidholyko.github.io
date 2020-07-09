@@ -20,6 +20,7 @@ export const Project = ({ project }) => {
     <Fragment>
       <button className="btn-green mr-2">
         <a
+          aria-label="codebase-link"
           className="no-decoration"
           href={repo}
           target="_blank"
@@ -31,6 +32,7 @@ export const Project = ({ project }) => {
 
       <button className="btn-green ml-2">
         <a
+          aria-label="deployment-link"
           className="no-decoration"
           href={deployed}
           target="_blank"
@@ -45,12 +47,12 @@ export const Project = ({ project }) => {
   return (
     <div className="project animated fadeIn" key={title + deployed}>
       <div className="d-flex">
-        <h3 className="project-header mt-1 font-weight-bold pr-2">{title}</h3>
+        <p className="project-header mt-1 font-weight-bold pr-2">{title}</p>
       </div>
-      <h5>
+      <p className="medium-font">
         <span>Focused on: </span>
         <span className="font-italic">{focus}</span>
-      </h5>
+      </p>
 
       <div className="project-info">
         <div className="project-description">

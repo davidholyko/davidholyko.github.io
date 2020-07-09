@@ -5,6 +5,7 @@ class BackgroundIconOverlay extends Component {
   render() {
     const renderIcons = ({ href, src }) => (
       <a
+        aria-label={src}
         className=""
         href={href}
         target="_blank"

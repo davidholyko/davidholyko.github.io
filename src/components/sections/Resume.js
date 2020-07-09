@@ -5,6 +5,7 @@ const Resume = () => {
   return (
     <Fragment>
       <a
+        aria-label="resume-link"
         className="d-flex justify-content-center"
         href="https://davidholyko.github.io/resume"
         target="_blank"
