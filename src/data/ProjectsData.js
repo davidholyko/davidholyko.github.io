@@ -1,4 +1,3 @@
-// import video0 from '../videos/video-0.webm'
 import video1 from '../videos/video-1.webm';
 import video2 from '../videos/video-2.webm';
 import video3 from '../videos/video-3.webm';
@@ -8,8 +7,8 @@ export const projects = [
   {
     title: 'CSS Heavy Portfolio',
     focus: 'CSS Animations, Bootstrap Components, and Styling',
-    deployed: 'https://davidholyko.github.io/davidholyko.github.io-deprecated',
-    repo: 'https://github.com/davidholyko/davidholyko.github.io-deprecated',
+    deployed: 'https://davidholyko.github.io/v1',
+    repo: 'https://github.com/davidholyko/v1',
     video: video1,
     tags: ['Animations', 'Handlebars.js', 'Moment.js', 'Prism.js'],
     description: [

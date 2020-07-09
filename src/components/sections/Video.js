@@ -43,6 +43,7 @@ class Video extends Component {
           onClick={this.handleClick}
           controls
           loop
+          preload="metadata"
         />
       </OverlayTrigger>
     );
