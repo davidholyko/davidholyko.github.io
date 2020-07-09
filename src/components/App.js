@@ -7,7 +7,7 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 
 class App extends Component {
-  render () {
+  render() {
     return (
       <div id="app">
         <div id="landing-page">

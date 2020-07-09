@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { icons } from '../../data/ContactData';
 
 class BackgroundIconOverlay extends Component {
-  render () {
+  render() {
     const renderIcons = ({ href, src }) => (
       <a
         className=""

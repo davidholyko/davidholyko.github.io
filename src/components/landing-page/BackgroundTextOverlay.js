@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Typing, { Backspace, Delay } from 'react-typing-animation';
 
 class BackgroundTextOverlay extends Component {
-  render () {
+  render() {
     return (
       <div id="background-text-overlay">
         <span className="text-large">David Ko</span>

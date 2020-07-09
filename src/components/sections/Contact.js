@@ -15,9 +15,9 @@ class Contact extends Component {
     </a>
   );
 
-  render () {
-    const text = `Need help on a project? Looking for a new hire? Send me a message or email!
-    I'd love to hear from you!`;
+  render() {
+    const text = `Need help on a project? Looking for a new hire? 
+    Send me a message or email!\nI'd love to hear from you!`;
 
     return (
       <div id="contact" className="section">

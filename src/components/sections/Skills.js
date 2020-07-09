@@ -4,7 +4,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import { skills, technologies, languages } from '../../data/SkillsData';
 
 class Skills extends Component {
-  renderIcons = items => {
+  renderIcons = (items) => {
     return items.map((item, index) => (
       <OverlayTrigger
         key={index}
@@ -16,7 +16,7 @@ class Skills extends Component {
     ));
   };
 
-  render () {
+  render() {
     return (
       <div id="skills" className="section break">
         <h4 className="section-title">Skills</h4>

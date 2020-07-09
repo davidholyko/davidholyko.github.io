@@ -4,7 +4,7 @@ import BackgroundIconOverlay from './BackgroundIconOverlay';
 import src from '../../images/background.webp';
 
 class Background extends Component {
-  render () {
+  render() {
     return (
       <div id="top" className="position-relative">
         <img src={src} alt="" className="background" />

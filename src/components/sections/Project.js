@@ -4,7 +4,7 @@ import Video from './Video';
 export const Project = ({ project }) => {
   const { focus, title, tags, deployed, repo, description, video } = project;
 
-  const renderTags = tags.split(',').map((tag, index) => (
+  const renderTags = tags.map((tag, index) => (
     <p key={index} className="bg-dark text-light mr-1 px-2 py-1 rounded">
       {tag}
     </p>
