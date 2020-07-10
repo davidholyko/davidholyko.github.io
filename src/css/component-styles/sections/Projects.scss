@@ -9,12 +9,13 @@
 }
 
 .project-info {
-  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 .project-description {
   display: flex;
   flex-direction: column;
-  width: 50%;
   padding: 0 1rem;
 }
