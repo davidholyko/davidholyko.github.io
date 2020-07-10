@@ -4,7 +4,7 @@ import Background from './landing-page/Background';
 import AboutMe from './sections/AboutMe';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
-import Contact from './sections/Contact';
+import Resume from './sections/Resume';
 import Footer from './landing-page/Footer';
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
           <AboutMe />
           <Skills />
           <Projects />
-          <Contact />
+          <Resume />
         </section>
         <Footer />
       </main>

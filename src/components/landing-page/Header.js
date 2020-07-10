@@ -8,7 +8,7 @@ const Header = () => {
     { href: 'about-me', text: 'About Me' },
     { href: 'skills', text: 'Skills' },
     { href: 'projects', text: 'Projects' },
-    { href: 'contact', text: 'Contact' },
+    { href: 'resume', text: 'Resume' },
   ];
 
   const scrollTo = (element) => {

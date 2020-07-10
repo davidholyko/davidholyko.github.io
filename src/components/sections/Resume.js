@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import src from '../../images/resume-preview.webp';
 
-class Contact extends Component {
+class Resume extends Component {
   render() {
     return (
-      <article id="contact" className="section">
+      <article id="resume" className="section">
         <div className="full-page">
           <h1 className="section-title mb-0">Resume</h1>
           <a
@@ -22,4 +22,4 @@ class Contact extends Component {
   }
 }
 
-export default Contact;
+export default Resume;
