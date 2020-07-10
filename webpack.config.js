@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -35,7 +35,7 @@ module.exports = {
           {
             loader: 'postcss-loader', // Run post css actions
             options: {
-              plugins: function () {
+              plugins: () => {
                 // post css plugins, can be exported to postcss.config.js
                 return [require('precss'), require('autoprefixer')];
               },
@@ -75,7 +75,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new FaviconsWebpackPlugin('./public/favicon.png'),
+    // new FaviconsWebpackPlugin('./public/favicon.png'),
   ],
   devtool: 'eval-cheap-module-source-map',
   devServer: {
