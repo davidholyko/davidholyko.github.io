@@ -38,14 +38,16 @@ const Header = () => {
     ));
 
   return (
-    <Scrollspy
-      items={sections.map((section) => section.href)}
-      currentClassName="is-current"
-      className="header"
-    >
-      {generateHeaderText([sections[0]], 'mr-auto')}
-      {generateHeaderText(sections.slice(1))}
-    </Scrollspy>
+    <header>
+      <Scrollspy
+        items={sections.map((section) => section.href)}
+        currentClassName="is-current"
+        className="header"
+      >
+        {generateHeaderText([sections[0]], 'mr-auto')}
+        {generateHeaderText(sections.slice(1))}
+      </Scrollspy>
+    </header>
   );
 };
 

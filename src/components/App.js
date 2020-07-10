@@ -5,23 +5,25 @@ import AboutMe from './sections/AboutMe';
 import Skills from './sections/Skills';
 import Projects from './sections/Projects';
 import Contact from './sections/Contact';
+import Footer from './landing-page/Footer';
 
 class App extends Component {
   render() {
     return (
-      <div id="app">
-        <div id="landing-page">
-          <Header />
+      <main id="app">
+        <Header />
+        <section id="landing-page">
           <Background />
-        </div>
+        </section>
 
-        <div id="sections">
+        <section id="sections">
           <AboutMe />
           <Skills />
           <Projects />
           <Contact />
-        </div>
-      </div>
+        </section>
+        <Footer />
+      </main>
     );
   }
 }

@@ -18,7 +18,7 @@ class Skills extends Component {
 
   render() {
     return (
-      <div id="skills" className="section break">
+      <article id="skills" className="section break">
         <p className="section-title">Skills</p>
         <p className="font-xlg text-center">Languages</p>
         <div className="skills-sub-section">{this.renderIcons(languages)}</div>
@@ -30,7 +30,7 @@ class Skills extends Component {
         <div className="skills-sub-section">
           {this.renderIcons(technologies)}
         </div>
-      </div>
+      </article>
     );
   }
 }

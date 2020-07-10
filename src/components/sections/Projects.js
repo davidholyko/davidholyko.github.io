@@ -60,7 +60,7 @@ class Projects extends Component {
     );
 
     return (
-      <div id="projects" className="section">
+      <article id="projects" className="section">
         <h1 className="section-title">Projects</h1>
         <div className="d-flex justify-content-start flex-wrap">
           {tags.map(button)}
@@ -76,7 +76,7 @@ class Projects extends Component {
         >
           <h3 className="m-0 text-light">Visit my projects page</h3>
         </a> */}
-      </div>
+      </article>
     );
   }
 }
