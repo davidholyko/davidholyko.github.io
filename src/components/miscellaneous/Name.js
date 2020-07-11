@@ -1,5 +1,16 @@
 import React from 'react';
 
+class SvgElement {
+  constructor({ element, strokeOffset, animation, timeoutOffset }) {
+    this.element = element;
+    this.strokeOffset = strokeOffset;
+    this.animation = animation;
+    this.timeoutOffset = timeoutOffset;
+    this.dashOffsetMin = 9000;
+    this.dashOffsetMax = 11000;
+  }
+}
+
 class Name extends React.Component {
   constructor(props) {
     super(props);
@@ -8,86 +19,91 @@ class Name extends React.Component {
     this.line2 = React.createRef(); // top horizontal line in D
     this.line3 = React.createRef(); // bottom horitonzal line in D
     this.svgRefs = [
-      {
+      new SvgElement({
         element: this.line1,
-        strokeOffset: -10,
-        animation: null,
-        timeoutOffset: 10000,
-        dashOffsetMin: 0,
-        dashOffsetMax: 20000,
-      },
-      {
+        strokeOffset: 10,
+        timeoutOffset: 2500,
+      }),
+      new SvgElement({
         element: this.line2,
         strokeOffset: -10,
-        animation: null,
-        timeoutOffset: 5000,
-        dashOffsetMin: 0,
-        dashOffsetMax: 20000,
-      },
-      {
+        timeoutOffset: 0,
+      }),
+      new SvgElement({
         element: this.line3,
-        strokeOffset: -10,
-        animation: null,
-        timeoutOffset: 2000,
-        dashOffsetMin: 0,
-        dashOffsetMax: 20000,
-      },
-      {
+        strokeOffset: 10,
+        timeoutOffset: 1800,
+      }),
+      new SvgElement({
         element: this.curveRef,
         strokeOffset: -10,
-        animation: null,
-        timeoutOffset: 950,
-        dashOffsetMin: 0,
-        dashOffsetMax: 20000,
-      },
+        timeoutOffset: 590,
+      }),
     ];
 
     this.state = {
+      sharedStrokeDashArray: 100,
       sharedStrokeDashOffset: 10000,
       sharedStrokeWidth: '10px',
     };
+
+    window.Name = this;
   }
-  animate = (ref) => {
+
+  animate = (ref, index) => {
     const element = ref.element.current;
     const strokeOffset = ref.strokeOffset;
     const { dashOffsetMin: min, dashOffsetMax: max } = ref;
     const offset = element.getAttribute('stroke-dashoffset');
 
+    console.log('!!! offset', offset, min, max);
+
     if (offset >= min && offset <= max) {
       element.setAttribute('stroke-dashoffset', +offset + strokeOffset);
+    } else {
+      element.setAttribute('stroke-dashoffset', 0);
+      this.clearAnimation(index);
     }
   };
 
   componentDidMount = () => {
     this.svgRefs.forEach((ref, index) => {
-      if (index === 0) return;
+      // if (index === 0) return;
       // if (index === 1) return;
-      if (index === 2) return;
+      // if (index === 2) return;
       // if (index === 3) return;
       setTimeout(() => {
-        this.svgRefs[index].animation = setInterval(
-          () => this.animate(ref),
-          50,
-        );
+        // const animation = setInterval(() => this.animate(ref, index), 50);
+        const animation = null;
+        this.svgRefs[index].animation = animation;
       }, ref.timeoutOffset);
     });
 
-    setTimeout(this.clearIntervals, 2000000);
+    setTimeout(this.clearAnimations, 2000000);
   };
 
   componentWillMount() {
-    this.clearIntervals();
+    this.clearAnimations();
   }
 
-  clearIntervals = () => {
+  clearAnimations = () => {
     this.svgRefs.forEach((_ref, index) => {
-      clearInterval(this.svgRefs[index].animation);
-      this.svgRefs[index].animation = null;
+      this.clearAnimation(index);
     });
   };
 
+  clearAnimation = (index) => {
+    clearInterval(this.svgRefs[index].animation);
+    this.svgRefs[index].animation = null;
+  };
+
   render() {
-    const { sharedStrokeDashOffset, sharedStrokeWidth } = this.state;
+    const {
+      sharedStrokeDashOffset,
+      sharedStrokeWidth,
+      sharedStrokeDashArray,
+    } = this.state;
+
     return (
       <div className="full-viewport">
         <svg
@@ -106,7 +122,7 @@ class Name extends React.Component {
                 `}
             stroke="#00FF00"
             strokeWidth={sharedStrokeWidth}
-            strokeDasharray="500"
+            strokeDasharray={sharedStrokeDashArray}
             strokeDashoffset={sharedStrokeDashOffset}
           ></path>
           <path
@@ -118,7 +134,7 @@ class Name extends React.Component {
                 `}
             stroke="#00FF00"
             strokeWidth={sharedStrokeWidth}
-            strokeDasharray="500"
+            strokeDasharray={sharedStrokeDashArray}
             strokeDashoffset={sharedStrokeDashOffset}
           ></path>
           <path
@@ -130,7 +146,7 @@ class Name extends React.Component {
                 `}
             stroke="#00FF00"
             strokeWidth={sharedStrokeWidth}
-            strokeDasharray="500"
+            strokeDasharray={sharedStrokeDashArray}
             strokeDashoffset={sharedStrokeDashOffset}
           ></path>
           <path
@@ -144,7 +160,7 @@ class Name extends React.Component {
                 `}
             stroke="#00FF00"
             strokeWidth={sharedStrokeWidth}
-            strokeDasharray="500"
+            strokeDasharray={sharedStrokeDashArray}
             strokeDashoffset={sharedStrokeDashOffset}
           ></path>
         </svg>
