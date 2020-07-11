@@ -20,6 +20,7 @@
   "parser": "babel-eslint",
   "plugins": ["react"],
   "rules": {
+    "no-var": "error",
     "space-before-function-paren": [
       "error",
       {

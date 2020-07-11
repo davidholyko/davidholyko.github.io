@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
@@ -19,9 +18,12 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
-          fix: true,
+          fix: false,
           emitError: true,
           emitWarning: true,
+          failOnError: false,
+          failOnWarning: false,
+          quiet: false,
         },
       },
       {
@@ -80,13 +82,11 @@ module.exports = {
       test: /\.js(\?.*)?$/i,
       algorithm: 'gzip',
     }),
-    // new FaviconsWebpackPlugin('./public/favicon.png'),
   ],
   devtool: 'eval-cheap-module-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     liveReload: false,
     open: true,
-    overlay: true,
   },
 };

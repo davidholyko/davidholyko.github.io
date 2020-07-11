@@ -1,15 +1,23 @@
 import './css/index.scss';
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import Loading from './components/miscellaneous/Loading';
+import Name from './components/miscellaneous/Name';
 
-import App from './components/App';
+const App = React.lazy(() => import('./components/App'));
 
-const appJsx = (
+let appJsx = (
   <BrowserRouter>
-    <App />
+    {/* <Suspense fallback={Loading}> */}
+    <Suspense fallback={Name}>
+      <App />
+    </Suspense>
   </BrowserRouter>
 );
+
+appJsx = <Loading />;
+appJsx = <Name />;
 
 ReactDOM.render(appJsx, document.getElementById('root'));
