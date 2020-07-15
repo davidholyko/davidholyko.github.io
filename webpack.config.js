@@ -82,7 +82,11 @@ module.exports = {
       test: /\.js(\?.*)?$/i,
       algorithm: 'gzip',
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      // comment out next 3 lines to enable analyser
+      analyzerMode: 'static',
+      analyzerPort: 1852,
+    }),
   ],
   devtool: 'eval-cheap-module-source-map',
   devServer: {
