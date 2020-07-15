@@ -1,5 +1,5 @@
-import React, { Fragment, Suspense } from 'react';
-const Video = React.lazy(() => import('./Video'));
+import React, { Fragment } from 'react';
+import Video from './Video';
 
 export const Project = ({ project }) => {
   const { focus, title, tags, deployed, repo, description, video } = project;
@@ -57,9 +57,7 @@ export const Project = ({ project }) => {
       <div className="project-info">
         <div className="project-description">
           <div className="project-tags-container">{renderTags}</div>
-          <Suspense fallback={<span></span>}>
-            <Video video={video} />
-          </Suspense>
+          <Video video={video} />
           <div className="project-link-buttons">{renderButtons}</div>
         </div>
 
