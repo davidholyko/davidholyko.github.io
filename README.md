@@ -25,3 +25,10 @@ npm start
 ```
 npm run deploy
 ```
+
+### Webpack Bundle Analyzer
+
+```
+npx webpack --profile --json > stats.json
+webpack-bundle-analyzer bundle/output/path/stats.json
+```
