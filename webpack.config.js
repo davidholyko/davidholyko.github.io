@@ -19,9 +19,10 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
-          fix: true,
-          emitError: true,
-          emitWarning: true,
+          // fix: true,
+          // emitError: true,
+          // emitWarning: true,
+          // failOnError: false,
         },
       },
       {
@@ -87,6 +88,5 @@ module.exports = {
     contentBase: path.join(__dirname, 'build'),
     liveReload: false,
     open: true,
-    overlay: true,
   },
 };
