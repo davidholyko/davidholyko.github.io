@@ -8,12 +8,11 @@ class BackgroundTextOverlay extends Component {
         <span className="text-large">David Ko</span>
         <Typing startDelay={1000} loop>
           <span className="text-medium">Software Engineer</span>
-          <Backspace count={18} delay={2000} />
-          <Delay ms={1000} />
-          <span className="text-medium">Full Stack Web Developer</span>
           <Backspace count={25} delay={2000} />
           <Delay ms={1000} />
-          <span className="text-medium">Diamond Ranked ADC in Smite</span>
+          <span className="text-medium">
+            Diamond Ranked ADC in Smite&trade;
+          </span>
           <Backspace count={36} delay={2000} />
           <Delay ms={1000} />
         </Typing>

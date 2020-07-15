@@ -1,6 +1,5 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
-import $ from 'jquery';
 
 const Header = () => {
   const sections = [
@@ -12,17 +11,11 @@ const Header = () => {
   ];
 
   const scrollTo = (element) => {
-    if (element === '#top') {
-      return $('html,body').animate(
-        { scrollTop: $(`${element}`).offset().top },
-        500,
-      );
-    }
-    $('html,body').animate(
-      { scrollTop: $(`${element}`).offset().top + 1 },
-      500,
-    );
+    document.querySelector(element).scrollIntoView({
+      behavior: 'smooth',
+    });
   };
+
   const handleClick = (event) => scrollTo(event.target.getAttribute('href'));
 
   const generateHeaderText = (sections, className) =>
@@ -31,7 +24,7 @@ const Header = () => {
         key={section + index}
         className={'header-item-text ' + className}
         onClick={handleClick}
-        href={`#${section.href}`}
+        href={'#' + section.href}
       >
         {section.text}
       </h3>

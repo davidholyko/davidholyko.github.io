@@ -1,7 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
@@ -81,7 +82,7 @@ module.exports = {
       test: /\.js(\?.*)?$/i,
       algorithm: 'gzip',
     }),
-    // new FaviconsWebpackPlugin('./public/favicon.png'),
+    new BundleAnalyzerPlugin(),
   ],
   devtool: 'eval-cheap-module-source-map',
   devServer: {
