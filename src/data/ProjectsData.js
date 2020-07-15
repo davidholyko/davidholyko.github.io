@@ -5,7 +5,7 @@ import video4 from '../videos/video-4.webm';
 
 export const projects = [
   {
-    title: 'CSS Heavy Portfolio',
+    title: 'Portfolio v1',
     focus: 'CSS Animations, Bootstrap Components, and Styling',
     deployed: 'https://davidholyko.github.io/v1',
     repo: 'https://github.com/davidholyko/v1',

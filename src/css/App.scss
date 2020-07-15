@@ -37,7 +37,7 @@
 
 .btn-blue {
   color: white;
-  background-color: #048;
+  background-color: var(--main-blue-light);
   border-radius: 0.25rem;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -46,7 +46,7 @@
   border: 0;
 
   &:hover {
-    background-color: #009400;
+    background-color: var(--main-blue-dark);
   }
 }
 
@@ -111,7 +111,7 @@
 }
 
 .section-title {
-  background-color: #048;
+  background-color: var(--main-blue);
   font-weight: bold;
   color: white;
   text-align: center;
