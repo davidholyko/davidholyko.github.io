@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
 
 class Video extends Component {
   constructor() {
@@ -33,19 +31,14 @@ class Video extends Component {
   render() {
     const { video } = this.props;
     return (
-      <OverlayTrigger
-        placement="top"
-        overlay={<Tooltip>Click to play/pause the video</Tooltip>}
-      >
-        <video
-          className="hover-shadow mb-3"
-          src={video}
-          onClick={this.handleClick}
-          controls
-          loop
-          preload="metadata"
-        />
-      </OverlayTrigger>
+      <video
+        className="mb-y"
+        src={video}
+        onClick={this.handleClick}
+        controls
+        loop
+        preload="metadata"
+      />
     );
   }
 }
