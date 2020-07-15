@@ -1,22 +1,15 @@
 import React from 'react';
 
-/**
- * references:
- *   https://css-tricks.com/svg-path-syntax-illustrated-guide/
- *   https://css-tricks.com/svg-line-animation-works/
- *   https://css-tricks.com/guide-svg-animations-smil/
- */
+// references
+// https://css-tricks.com/svg-path-syntax-illustrated-guide/
+// https://css-tricks.com/svg-line-animation-works/
+// https://css-tricks.com/guide-svg-animations-smil/
+// https://greensock.com/forums/topic/16899-draw-svg-starting-from-wrong-point/
 
 class D extends React.Component {
   constructor(props) {
     super(props);
     this.pathRef = React.createRef();
-
-    this.state = {
-      sharedStrokeWidth: '10px',
-    };
-
-    window.Name = this;
   }
 
   render() {
@@ -30,11 +23,12 @@ class D extends React.Component {
           height="500px"
         >
           <path
+            ref={this.pathRef}
             className="path"
             id="D"
             fill="none"
             stroke="#ffffff"
-            strokeWidth="1px"
+            strokeWidth="2px"
             d={`
             M 7.5, 46
             v -42.5
@@ -61,7 +55,7 @@ class D extends React.Component {
             c -2.38, 0.94
               -5.01, 1.41
               -7.89, 1.41
-            h-15`}
+            h -16`}
           />
         </svg>
       </div>
