@@ -19,3 +19,18 @@
   flex-direction: column;
   padding: 0 1rem;
 }
+
+.project-tag {
+  display: inline-block;
+  font-size: 12px;
+  border: 2px solid black;
+  margin: 0.25rem 0.25rem 0.25rem 0;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+
+  &:hover {
+    color: white;
+    background-color: #666;
+    border: 2px solid #666;
+  }
+}

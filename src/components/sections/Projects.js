@@ -68,14 +68,6 @@ class Projects extends Component {
         {focusedTag
           ? this.filterProjects(projects)
           : this.allProjects(projects)}
-        {/* <a
-          className="no-decoration btn-green mt-5"
-          href="https://davidholyko.github.io/dko-projects"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h3 className="m-0 text-light">Visit my projects page</h3>
-        </a> */}
       </article>
     );
   }
