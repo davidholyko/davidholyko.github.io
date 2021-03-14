@@ -73,6 +73,11 @@ module.exports = {
           from: path.resolve(__dirname, 'README.md'),
           to: './',
         },
+        {
+          from: 'CNAME',
+          to: 'CNAME',
+          toType: 'file',
+        },
       ],
     }),
     new HtmlWebpackPlugin({
