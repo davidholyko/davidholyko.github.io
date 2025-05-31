@@ -4,8 +4,9 @@ module.exports = {
   singleQuote: true,
   tabWidth: 2,
   useTabs: false,
-  trailingComma: 'es5',
+  trailingComma: "es5",
   printWidth: 80,
   bracketSpacing: true,
-  arrowParens: 'avoid',
+  arrowParens: "avoid",
+  tailwindConfig: "./styles/tailwind.config.js",
 };
